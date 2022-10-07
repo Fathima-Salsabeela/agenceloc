@@ -1,0 +1,42 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+<h1>
+ 
+   {% if editMode %}
+        Modification de vehicule
+  {% else %}
+      Création d'un vehicule
+   {% endif %}
+ 
+</h1>
+
+
+{{form_start(form,{
+    attr: {
+        novalidate: 'novalidate'
+    }
+})}}
+
+{{form_row(form.titre)}}
+{{form_row(form.marque)}}
+{{form_row(form.modele)}}
+{{form_row(form.description|raw)}}
+{{form_row(form.photo)}}
+{{form_row(form.prix_jounalier)}}
+
+
+
+<button type="submit" class ="btn btn-primary mt-2">
+
+{% if editMode %}
+  Enregistrer les modifications
+  {% else %}
+  Ajouter vehicule
+{% endif %}
+</button>
+
+{{form_end(form)}}
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Commande{% endblock %}
+
+{% block body %}
+<a class= "btn btn-success mt-2" href="{{ path('admin_new_commande')}}">Ajout commande</a>
+<table class="table">
+<div class=""></div>
+	<thead>
+		<tr>
+           <th>Membre</th>
+            <th>Vehicule</th>
+            <th>Date et heure depart</th>
+            <th>Date et heure de fin</th>
+            <th>Prix Total</th>
+            <th>Date Et Heure De Enregistrement</th> 
+            <th>Action</th>
+           
+        </tr>
+	</thead>
+	<tbody>
+        {% for commande in commandes  %}
+         <tr>
+             <td>{{commande.membre.id}}</td>
+             <td>{{commande.vehicule.titre}}</td>
+             <td>{{commande.dateHeureDepart|date('d/m/Y à H:i:s')}}</td> 
+             <td>{{commande.dateHeureFin|date('d/m/Y à H:i:s')}}</td>
+             <td>{{commande.prixTotal}}</td>
+             <td>{{commande.dateEnregistrement|date('d/m/Y à H:i:s')}}</td> 
+            <td>
+            <a href="{{path('admin_edit_commande',{id: commande.id})}}"  class="text-dark"><i class="fas fa-edit"></i></a>
+            <a href="{{path('admin_delete_commande',{id: commande.id})}}"  class="text-dark"><i class="fas fa-trash"></i></a>
+            </td>
+
+         </tr>
+            
+        {% endfor %}
+    </tbody>
+
+</table>
+{% endblock %}

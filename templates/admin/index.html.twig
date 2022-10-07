@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminController!{% endblock %}
+
+{% block body %}
+<h1 class="display-4 text-center my-4">BACKOFFICE</h1>
+
+<P class="text-center">Bienvenue sur votre backOffice</P>
+
+<a href="{{path('data_liste')}}" class="col-md-6 offset-md-3 btn btn-dark">GESTION DES VEHICULES</a>
+<a href="{{path('max_liste')}}" class="col-md-6 offset-md-3 btn btn-dark">GESTION DES MEMBRES</a>
+<a href="{{path('admin_new_commande')}}" class="col-md-6 offset-md-3 btn btn-dark">GESTION DES COMMANDES</a>
+{% endblock %}

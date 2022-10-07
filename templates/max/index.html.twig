@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}membre{% endblock %}
+
+{% block body %}
+<a class= "btn btn-success mt-2" href="{{path('app_register')}}">Ajout membre</a>
+<table class="table">
+<div class=""></div>
+	<thead>
+		<tr>
+           <th>Pseudo</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Email</th>
+            <th>Civilite</th>
+            <th>Statut</th>
+            <th>date_Enregistrement</th> 
+            <th>Action</th>
+           
+        </tr>
+	</thead>
+	<tbody>
+        {% for membre in membre %}
+         <tr>
+             <td>{{membre.pseudo}}</td>
+             <td>{{membre.nom}}</td>
+             <td>{{membre.prenom}}</td> 
+             <td>{{membre.email}}</td>
+             <td>{{membre.civilite}}</td>
+             <td>{{membre.statut}}</td>
+             <td>{{membre.dateEnregistrement|date('d/m/Y')}}</td> 
+             <td>
+            <a href="{{path('max_edit',{id: membre.id})}}" class="text-dark" ><i class="fas fa-edit"></i></a>
+            <a href="{{path('max_delete',{id: membre.id})}}" class="text-dark" ><i class="fas fa-trash"></i></a>
+            </td>
+         </tr>
+            
+        {% endfor %}
+    </tbody>
+
+</table>
+{% endblock %}
