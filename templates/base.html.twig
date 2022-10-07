@@ -18,7 +18,7 @@
     </head>
     <body  >
     <nav class="navbar navbar-expand-lg navbar-light bg-light" >
-            <div class="container-fluid" style="background-color:#AD1B9E">
+            <div class="container-fluid" style="background-color:#FFB6C1">
                 <a class="navbar-brand" href="#">AGENCELOC</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -28,7 +28,7 @@
                     <a class="nav-link active" aria-current="page" href="{{ path('home')}} ">Accueil</a> 
                     <a class="nav-link" href="{{ path('data_liste')}}">Gestion des Vehicules</a>
                     <a class="nav-link" href="{{ path('max_liste')}}">Gestion des Membres</a>
-                    <a class="nav-link" href="{{ path('admin_new_commande')}}">Gestion des Commendes</a>
+                    <a class="nav-link" href="{{ path('admin_new_commande')}}">Gestion des Commandes</a>
                     {% if app.user %} 
                         <a class="nav-link" href="{{ path('app_logout')}}">Déconnextion</a>
                     {% else %} 

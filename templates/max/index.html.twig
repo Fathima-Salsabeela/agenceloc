@@ -28,7 +28,7 @@
              <td>{{membre.email}}</td>
              <td>{{membre.civilite}}</td>
              <td>{{membre.statut}}</td>
-             <td>{{membre.dateEnregistrement|date('d/m/Y')}}</td> 
+             <td>{{membre.dateEnregistrement|date('d/m/Y à H:m:s')}}</td> 
              <td>
             <a href="{{path('max_edit',{id: membre.id})}}" class="text-dark" ><i class="fas fa-edit"></i></a>
             <a href="{{path('max_delete',{id: membre.id})}}" class="text-dark" ><i class="fas fa-trash"></i></a>
