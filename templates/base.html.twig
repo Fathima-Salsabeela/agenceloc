@@ -26,9 +26,9 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="{{ path('home')}} ">Accueil</a> 
-                    <a class="nav-link" href="{{ path('data_liste')}}">Gestion des Vehicules</a>
+                    {# <a class="nav-link" href="{{ path('data_liste')}}">Gestion des Vehicules</a>
                     <a class="nav-link" href="{{ path('max_liste')}}">Gestion des Membres</a>
-                    <a class="nav-link" href="{{ path('admin_new_commande')}}">Gestion des Commandes</a>
+                    <a class="nav-link" href="{{ path('admin_new_commande')}}">Gestion des Commandes</a> #}
                     {% if app.user %} 
                         <a class="nav-link" href="{{ path('app_logout')}}">Déconnextion</a>
                     {% else %} 
